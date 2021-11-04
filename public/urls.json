@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/d475",
+      "destination": "/content/pageA",
+      "permanent": true
+    },
+    {
+      "source": "/42e2",
+      "destination": "/content/pageB",
+      "permanent": true
+    }
+  ]
+}
