@@ -18,8 +18,6 @@ async function main() {
   const currentHashes = currentUrls.redirects.map((url) => url.source);
 
   for (const file of files) {
-    let outputHash = `/${md5(file).slice(0, 4)}`;
-
     const filePath = file
       // Replace the prefix
       .replace(`${process.cwd()}/pages`, "")
@@ -30,6 +28,8 @@ async function main() {
     if (currentEntries.includes(filePath)) {
       continue;
     }
+
+    let outputHash = `/${md5(file).slice(0, 4)}`;
 
     // If our hash collides, rehash
     while (currentHashes.includes(outputHash)) {
